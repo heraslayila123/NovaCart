@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova Store | Mini E-Commerce</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a href="#" class="logo">nova<span>.</span></a>
+    <a href="#cart" class="cart-link">
+      🛒 Cart <span id="cartCount">0</span>
+    </a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">THE EVERYDAY COLLECTION</p>
+      <h1>Good finds.<br><span>Better living.</span></h1>
+      <p>Thoughtfully selected essentials for your everyday life.</p>
+      <a href="#products" class="shop-button">Explore collection ↓</a>
+    </section>
+
+    <section id="products" class="products-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">CURATED FOR YOU</p>
+          <h2>Featured products</h2>
+        </div>
+        <p id="productCount" class="muted"></p>
+      </div>
+
+      <div id="productGrid" class="product-grid"></div>
+    </section>
+
+    <section id="cart" class="cart-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">YOUR SELECTION</p>
+          <h2>Shopping cart</h2>
+        </div>
+        <button id="clearCart" class="text-button">Clear cart</button>
+      </div>
+
+      <div id="cartItems" class="cart-items"></div>
+
+      <div class="cart-summary">
+        <div>
+          <p class="muted">Subtotal</p>
+          <h2 id="cartTotal">₹0</h2>
+          <p class="muted">Demo store · No actual payment</p>
+        </div>
+        <button id="checkoutButton" class="primary-button">
+          Review order →
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#" class="logo">nova<span>.</span></a>
+    <p>A mini e-commerce project built with HTML, CSS and JavaScript.</p>
+  </footer>
+
+  <dialog id="checkoutModal" class="checkout-modal">
+    <button id="closeModal" class="close-button" aria-label="Close">×</button>
+    <p class="eyebrow">ORDER SUMMARY</p>
+    <h2>Ready to check out?</h2>
+    <p class="muted">Review your items before placing your demo order.</p>
+    <div id="checkoutItems" class="checkout-items"></div>
+    <div class="modal-total">
+      <span>Total</span>
+      <strong id="checkoutTotal">₹0</strong>
+    </div>
+    <button id="placeOrder" class="primary-button full-button">
+      Confirm demo order
+    </button>
+    <p class="muted small-text">No payment will be collected.</p>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
